@@ -25,7 +25,8 @@ export const GET = async (request) => {
   try {
     const posts = await prisma.post.findMany();
 
-    return NextResponse.json(posts);
+    // return NextResponse.json(posts);
+      return NextResponse.json({ posts }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ message: "GET Error", error }, { status: 500 });
   }
