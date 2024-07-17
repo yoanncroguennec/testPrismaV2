@@ -1,8 +1,10 @@
 import React from "react";
 
+// const baseURL = "http://localhost:3000";
+
 export default async function GetPost() {
   async function getdata() {
-    const res = await fetch("http://localhost:3000/api/posts", {
+    const res = await fetch("/api/posts", {
       cache: "no-store",
     });
 
