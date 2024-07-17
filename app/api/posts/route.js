@@ -3,23 +3,23 @@
 import { NextResponse } from "next/server";
 import prisma from "../../../lib/prisma"
 
-// export const POST = async (request) => {
-//   try {
-//     const body = await request.json();
-//     const { title, desc } = body;
+export const POST = async (request) => {
+  try {
+    const body = await request.json();
+    const { title, desc } = body;
 
-//     const newPost = await prisma.post.create({
-//       data: {
-//         title,
-//         desc,
-//       },
-//     });
+    const newPost = await prisma.post.create({
+      data: {
+        title,
+        desc,
+      },
+    });
 
-//     return NextResponse.json(newPost);
-//   } catch (error) {
-//     return NextResponse.json({ message: "POST Error", error }, { status: 500 });
-//   }
-// };
+    return NextResponse.json(newPost);
+  } catch (error) {
+    return NextResponse.json({ message: "POST Error", error }, { status: 500 });
+  }
+};
 
 export const GET = async (request) => {
   try {
