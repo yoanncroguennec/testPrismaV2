@@ -4,14 +4,14 @@ import prisma from "@/lib/prisma";
 import Link from "next/link";
 import React, { Suspense } from "react";
 import AddPost from "./AddPost";
-import GetPost from "./GetPost";
+// import GetPost from "./GetPost";
 
 const HomePage = async () => {
   return (
     <div className='py-6'>
       <AddPost />
 
-      <GetPost />
+      {/* <GetPost /> */}
 
       <Box>
         <div className='flex items-center w-full justify-between'>
